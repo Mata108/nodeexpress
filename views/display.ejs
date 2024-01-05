@@ -1,0 +1,36 @@
+<%- include('./header.ejs') %>
+
+   <h1 class="mt-5">Display Course</h1>
+  <div class="container mt-5">
+   
+    <table class="table table-bordered">
+        <tr>
+            <!-- <th>Id</th> -->
+            <div class="col-md-12">
+
+            
+            <th>Name</th>
+            <th>Email</th>
+             <th>Phone no</th>
+             <th>Action</th>
+            </div>
+        </tr>
+            <% d.forEach((item)=>{ %>
+                <tr>
+                    <!-- <td><%= item.id %></td> -->
+                    <td><%= item.name %></td>
+                    <td><%= item.email %></td>
+                    <td><%= item.phone %></td>
+                    
+                    <td>
+                        <a href="/view/<%= item.id %>" class="btn btn-info">View</a>
+                        <a href="/edit/<%= item.id %>" class="btn btn-success">edit</a>
+                        <!-- <a href="/coursedelete/<%= item.id %>" class="btn btn-danger">delete</a> -->
+                    </td>
+                </tr>
+            <% }) %>
+      
+    </table>
+  </div>
+
+<% include('./footer.ejs') %>

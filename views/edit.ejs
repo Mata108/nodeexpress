@@ -1,0 +1,56 @@
+<%- include('./header.ejs') %>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 class="text-center mb-5" style="font-family:fantasy;">course edit</h1>
+<div class="container">
+   <div class="row">
+      <div class="col-md-4"></div>
+        <div class="col-md-4">
+         
+        
+         <form action="/courseupdate/<%=d._id %>" method="post">
+            <div class="mb-3">
+               <label for="">Name:</label>
+               <input type="text" name="name" value="<%=d.name %>" class="form-control">
+            </div>
+            <!-- name div form end -->
+            <div class="mb-3">
+               <label for="">email:</label>
+               <input type="email" name="email" value="<%=d.email %>" class="form-control" readonly>
+            </div>
+            <!-- email div form end -->
+            <div class="mb-3">
+               <label for="">Phone NO:</label>
+               <input type="number" name="phone" value="<%=d.phone %>" class="form-control">
+            </div>
+            <!-- Phone NO div form end -->
+            <div class="mb-3">
+               <label for="">10th number:</label>
+               <input type="number" name="tenth" value="<%=d.tenth %>" class="form-control">
+            </div>
+            <!-- 10th number div form end -->
+            <div class="mb-3">
+               <label for="">12th number:</label>
+               <input type="number" name="twelth" value="<%=d.twelth %>" class="form-control">
+            </div>
+            <!-- 12th number div form end -->
+            <div class="mb-3">
+               <label for="">course:</label>
+               <input type="text" name="course" class="form-control" value="Btech" readonly required>
+            </div>
+            <!-- course div form end -->
+             <button class="btn btn-primary" type="submit">Update</button>
+          </form>
+        
+      </div>
+      <div class="col-md-4"></div>
+   </div>
+</div>
+
+
+<%- include('./footer.ejs') %>

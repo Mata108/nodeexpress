@@ -1,0 +1,46 @@
+<%- include('./header.ejs') %>
+
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1 class="text-center mb-4" style="font-family:cursive; font-weight:bold;">course view</h1>
+  <div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <!-- <th>Id</th> -->
+            <th>Name</th>
+            <th>Email</th>
+            <th>phoneno</th>
+            <th>tenth marks</th>
+            <th>twelth marks</th>
+            <th>Course</th>
+            <th>stautus</th>
+        </tr>
+          <tr>
+            <!-- <td> <%= d._id %> </td> -->
+            <td><%= d.name %></td>
+            <td><%= d.email %></td>
+            <td><%= d.phone %></td>
+            <td><%= d.tenth %></td>
+            <td><%= d.twelth %></td>
+            <td><%= d.course %></td>
+            <td><%= d.status %></td>
+
+          </tr>
+        
+        
+    </table>
+  </div>
+
+
+
+
+
+
+<%- include('../footer.ejs') %>
